@@ -253,3 +253,150 @@ footer {
     opacity: 0.3;
   }
 }
+
+/* ===== 2D CURSOR CAT ===== */
+
+#cursor-cat {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 65px;
+  height: 55px;
+  z-index: 9999;
+  pointer-events: none;
+  transform: translate(-100px, -100px);
+  transition: filter 0.3s;
+}
+
+.cat-body {
+  position: relative;
+  width: 55px;
+  height: 35px;
+  background: #3b82f6;
+  border-radius: 45% 50% 35% 35%;
+  box-shadow: 0 0 15px rgba(59,130,246,0.6);
+  margin-top: 17px;
+}
+
+.cat-head {
+  position: absolute;
+  width: 34px;
+  height: 31px;
+  background: #60a5fa;
+  border-radius: 50%;
+  top: -15px;
+  left: 24px;
+  z-index: 2;
+}
+
+.cat-ear {
+  position: absolute;
+  width: 13px;
+  height: 17px;
+  background: #60a5fa;
+  top: -19px;
+  z-index: 1;
+}
+
+.cat-ear.left {
+  left: 28px;
+  transform: rotate(-20deg);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.cat-ear.right {
+  left: 46px;
+  transform: rotate(20deg);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.cat-eye {
+  position: absolute;
+  width: 5px;
+  height: 7px;
+  background: #07111f;
+  border-radius: 50%;
+  top: 10px;
+}
+
+.cat-eye.left {
+  left: 9px;
+}
+
+.cat-eye.right {
+  right: 9px;
+}
+
+.cat-nose {
+  position: absolute;
+  top: 19px;
+  left: 15px;
+  width: 5px;
+  height: 4px;
+  background: #ff9dbb;
+  border-radius: 50%;
+}
+
+.cat-mouth {
+  position: absolute;
+  top: 23px;
+  left: 14px;
+  width: 7px;
+  height: 4px;
+  border-bottom: 1px solid #07111f;
+  border-radius: 50%;
+}
+
+.cat-tail {
+  position: absolute;
+  width: 27px;
+  height: 20px;
+  border: 5px solid #3b82f6;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 50%;
+  top: -12px;
+  left: -15px;
+  transform: rotate(-20deg);
+  animation: tailMove 1s ease-in-out infinite alternate;
+}
+
+.cat-leg {
+  position: absolute;
+  width: 8px;
+  height: 15px;
+  background: #2563eb;
+  border-radius: 5px;
+  bottom: -10px;
+}
+
+.leg1 { left: 7px; }
+.leg2 { left: 20px; }
+.leg3 { left: 35px; }
+.leg4 { left: 47px; }
+
+#cursor-cat.running .leg1,
+#cursor-cat.running .leg3 {
+  animation: legRun 0.2s infinite alternate;
+}
+
+#cursor-cat.running .leg2,
+#cursor-cat.running .leg4 {
+  animation: legRun 0.2s infinite alternate-reverse;
+}
+
+@keyframes legRun {
+  from { transform: rotate(-25deg); }
+  to { transform: rotate(25deg); }
+}
+
+@keyframes tailMove {
+  from { transform: rotate(-30deg); }
+  to { transform: rotate(25deg); }
+}
+
+@media (max-width: 600px) {
+  #cursor-cat {
+    display: none;
+  }
+}
