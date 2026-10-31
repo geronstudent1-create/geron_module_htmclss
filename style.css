@@ -174,3 +174,82 @@ footer {
   gap: 1.5rem;
   margin-top: 2rem;
 }
+/* --- Анимация кота и бабочек в шапке --- */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.cat-animation-box {
+  width: 45px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Силуэт кота */
+.cat-svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--accent-blue);
+  filter: drop-shadow(0 0 6px var(--accent-blue-glow));
+  animation: catBreath 3s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Движение лапки (пытается поймать) */
+.cat-paw {
+  transform-origin: 20px 20px;
+  animation: catchButterfly 2.5s ease-in-out infinite;
+}
+
+/* Летающая бабочка */
+.butterfly-svg {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  fill: var(--accent-blue-hover);
+  filter: drop-shadow(0 0 4px var(--accent-blue));
+  top: 5px;
+  left: 2px;
+  animation: flyButterfly 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Плавные ключевые кадры анимаций */
+@keyframes catBreath {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.05); }
+}
+
+@keyframes catchButterfly {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  30% { transform: rotate(-25deg) translateY(-3px); }
+  45% { transform: rotate(10deg) translateY(1px); }
+  60% { transform: rotate(-15deg) translateY(-2px); }
+}
+
+@keyframes flyButterfly {
+  0% {
+    transform: translate(0, 15px) scale(0.8) rotate(0deg);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(18px, -2px) scale(1) rotate(15deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(8px, 12px) scale(0.9) rotate(-10deg);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(22px, 2px) scale(1.1) rotate(25deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 15px) scale(0.8) rotate(0deg);
+    opacity: 0.3;
+  }
+}

@@ -31,7 +31,27 @@
 
   <header>
     <nav class="navbar">
-      <a href="index.html" class="logo">CyberRealm</a>
+      <!-- Интерактивный логотип с анимированным котом и бабочкой -->
+      <a href="index.html" class="logo-container">
+        <div class="cat-animation-box">
+          <!-- Бабочка -->
+          <svg class="butterfly-svg" viewBox="0 0 24 24">
+            <path d="M12,12 C14,8 19,6 21,9 C23,12 19,16 12,14 C5,16 1,12 3,9 C5,6 10,8 12,12 Z" />
+          </svg>
+          <!-- Кот (силуэт) -->
+          <svg class="cat-svg" viewBox="0 0 24 24">
+            <!-- Тело и голова -->
+            <path d="M12,4 L14,7 L18,5 L17,9 C19,11 20,14 19,18 C18,21 15,22 12,22 C9,22 6,21 5,18 C4,14 5,11 7,9 L6,5 L10,7 L12,4 Z" />
+            <!-- Уголки ушей и лапка с анимацией -->
+            <g class="cat-paw">
+              <circle cx="10" cy="15" r="2" fill="#0b0f19" />
+              <circle cx="14" cy="15" r="2" fill="#0b0f19" />
+            </g>
+          </svg>
+        </div>
+        <span class="logo">CyberRealm</span>
+      </a>
+
       <ul class="nav-links">
         <li><a href="index.html" class="active">Главная</a></li>
         <li><a href="catalog.html">Каталог</a></li>
