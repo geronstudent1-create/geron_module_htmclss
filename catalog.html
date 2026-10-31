@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberRealm — Каталог</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .filter-bar {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background-color: var(--card-bg);
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .filter-btn:hover, .filter-btn.active {
+      color: var(--accent-blue);
+      border-color: var(--accent-blue);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">CyberRealm</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html" class="active">Каталог</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+        <li><a href="profile.html">Профиль</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 style="color: var(--accent-blue); margin-bottom: 1.5rem;">Каталог игр</h1>
+
+    <div class="filter-bar">
+      <button class="filter-btn active">Все жанры</button>
+      <button class="filter-btn">Экшен</button>
+      <button class="filter-btn">Стратегии</button>
+      <button class="filter-btn">RPG</button>
+      <button class="filter-btn">Инди</button>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Shadow Protocol</h3>
+        <p style="color: var(--text-muted); margin: 0.5rem 0;">Стелс-экшен</p>
+        <p style="color: var(--accent-blue); font-weight: bold; margin-bottom: 1rem;">1 999 ₽</p>
+        <a href="cart.html" class="btn">Купить</a>
+      </div>
+      <div class="card">
+        <h3>Star Horizon</h3>
+        <p style="color: var(--text-muted); margin: 0.5rem 0;">Космическая стратегия</p>
+        <p style="color: var(--accent-blue); font-weight: bold; margin-bottom: 1rem;">2 499 ₽</p>
+        <a href="cart.html" class="btn">Купить</a>
+      </div>
+      <div class="card">
+        <h3>Mythic Legends</h3>
+        <p style="color: var(--text-muted); margin: 0.5rem 0;">RPG</p>
+        <p style="color: var(--accent-blue); font-weight: bold; margin-bottom: 1rem;">1 499 ₽</p>
+        <a href="cart.html" class="btn">Купить</a>
+      </div>
+      <div class="card">
+        <h3>Neon Drift 2088</h3>
+        <p style="color: var(--text-muted); margin: 0.5rem 0;">Гонки</p>
+        <p style="color: var(--accent-blue); font-weight: bold; margin-bottom: 1rem;">899 ₽</p>
+        <a href="cart.html" class="btn">Купить</a>
+      </div>
+      <div class="card">
+        <h3>Dungeon Raider</h3>
+        <p style="color: var(--text-muted); margin: 0.5rem 0;">Рогалик / Инди</p>
+        <p style="color: var(--accent-blue); font-weight: bold; margin-bottom: 1rem;">599 ₽</p>
+        <a href="cart.html" class="btn">Купить</a>
+      </div>
+      <div class="card">
+        <h3>Cyber Odyssey</h3>
+        <p style="color: var(--text-muted); margin: 0.5rem 0;">Открытый мир / RPG</p>
+        <p style="color: var(--accent-blue); font-weight: bold; margin-bottom: 1rem;">2 999 ₽</p>
+        <a href="cart.html" class="btn">Купить</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CyberRealm. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>

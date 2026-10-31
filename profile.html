@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberRealm — Профиль</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .profile-container {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 768px) {
+      .profile-container {
+        grid-template-columns: 1fr;
+      }
+    }
+    .avatar-box {
+      text-align: center;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: var(--border-color);
+      border: 2px solid var(--accent-blue);
+      margin: 0 auto 1rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: var(--accent-blue);
+      box-shadow: 0 0 15px var(--accent-blue-glow);
+    }
+    .info-group {
+      margin-bottom: 1.5rem;
+    }
+    .info-group label {
+      display: block;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    .info-group input {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      color: var(--text-main);
+      transition: var(--transition-fast);
+    }
+    .info-group input:focus {
+      outline: none;
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 8px var(--accent-blue-glow);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">CyberRealm</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+        <li><a href="profile.html" class="active">Профиль</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 style="color: var(--accent-blue); margin-bottom: 1.5rem;">Профиль игрока</h1>
+
+    <div class="profile-container">
+      <!-- Боковая панель профиля -->
+      <div class="card avatar-box">
+        <div class="avatar">🎮</div>
+        <h3>Player_One</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.2rem;">Уровень: 42</p>
+      </div>
+
+      <!-- Данные аккаунта -->
+      <div class="card">
+        <h2 style="margin-bottom: 1.5rem;">Личные данные</h2>
+        <form onsubmit="return false;">
+          <div class="info-group">
+            <label>Имя пользователя</label>
+            <input type="text" value="Player_One">
+          </div>
+          <div class="info-group">
+            <label>Email</label>
+            <input type="email" value="player1@cyberrealm.com">
+          </div>
+          <div class="info-group">
+            <label>Пароль</label>
+            <input type="password" value="••••••••••••">
+          </div>
+          <button class="btn" style="margin-top: 1rem;">Сохранить изменения</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CyberRealm. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>

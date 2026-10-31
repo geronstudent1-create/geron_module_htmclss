@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberRealm — Корзина</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      transition: var(--transition-fast);
+    }
+    .cart-item:hover {
+      border-color: var(--accent-blue);
+    }
+    .remove-btn {
+      background: none;
+      border: none;
+      color: #ef4444;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .remove-btn:hover {
+      opacity: 0.7;
+    }
+    .summary {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">CyberRealm</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html" class="active">Корзина</a></li>
+        <li><a href="profile.html">Профиль</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 style="color: var(--accent-blue); margin-bottom: 1.5rem;">Ваша корзина</h1>
+
+    <div class="cart-list">
+      <div class="cart-item">
+        <div>
+          <h3>Shadow Protocol</h3>
+          <p style="color: var(--text-muted);">Цифровая версия (Ключ)</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1.5rem;">
+          <span style="color: var(--accent-blue); font-weight: bold;">1 999 ₽</span>
+          <button class="remove-btn">Удалить</button>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <div>
+          <h3>Star Horizon</h3>
+          <p style="color: var(--text-muted);">Цифровая версия (Ключ)</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 1.5rem;">
+          <span style="color: var(--accent-blue); font-weight: bold;">2 499 ₽</span>
+          <button class="remove-btn">Удалить</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="summary">
+      <div>
+        <h2>Итого: <span style="color: var(--accent-blue);">4 498 ₽</span></h2>
+      </div>
+      <button class="btn">Оформить заказ</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CyberRealm. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>

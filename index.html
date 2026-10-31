@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberRealm — Главная</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(180deg, rgba(59, 130, 246, 0.1) 0%, rgba(11, 15, 25, 0) 100%);
+      border-radius: 16px;
+      margin-bottom: 3rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      color: var(--accent-blue);
+      margin-bottom: 1rem;
+      text-shadow: 0 0 20px var(--accent-blue-glow);
+    }
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo">CyberRealm</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+        <li><a href="profile.html">Профиль</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Добро пожаловать в CyberRealm</h1>
+      <p>Исследуйте бескрайние виртуальные миры, сражайтесь в эпических битвах и пополняйте свою коллекцию лучшими играми.</p>
+      <a href="catalog.html" class="btn">Перейти в каталог</a>
+    </section>
+
+    <h2>Популярные игры</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Shadow Protocol</h3>
+        <p style="color: var(--text-muted); margin: 0.5rem 0;">Стелс-екшен в стиле киберпанк.</p>
+        <p style="color: var(--accent-blue); font-weight: bold; margin-bottom: 1rem;">1 999 ₽</p>
+        <a href="cart.html" class="btn">В корзину</a>
+      </div>
+      <div class="card">
+        <h3>Star Horizon</h3>
+        <p style="color: var(--text-muted); margin: 0.5rem 0;">Космическая стратегия в реальном времени.</p>
+        <p style="color: var(--accent-blue); font-weight: bold; margin-bottom: 1rem;">2 499 ₽</p>
+        <a href="cart.html" class="btn">В корзину</a>
+      </div>
+      <div class="card">
+        <h3>Mythic Legends</h3>
+        <p style="color: var(--text-muted); margin: 0.5rem 0;">Кооперативная RPG с открытым миром.</p>
+        <p style="color: var(--accent-blue); font-weight: bold; margin-bottom: 1rem;">1 499 ₽</p>
+        <a href="cart.html" class="btn">В корзину</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 CyberRealm. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
